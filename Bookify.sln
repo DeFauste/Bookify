@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9C154FCB-1109-4834-BE6F-58D718940C2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{987F2C9A-82AA-4416-95F7-98FD40A037EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3B44435C-1027-4254-B082-AA88B1A20A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFile", "SolutionFile", "{C266EEEF-41EB-45C0-BD21-10F2BCB55C8D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B44435C-1027-4254-B082-AA88B1A20A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B44435C-1027-4254-B082-AA88B1A20A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B44435C-1027-4254-B082-AA88B1A20A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B44435C-1027-4254-B082-AA88B1A20A10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B44435C-1027-4254-B082-AA88B1A20A10} = {9C154FCB-1109-4834-BE6F-58D718940C2F}
+	EndGlobalSection
+EndGlobal
