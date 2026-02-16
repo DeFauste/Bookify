@@ -1,7 +1,7 @@
 ﻿namespace Domain.Apartments;
 
 /// <summary>
-/// Адрес расположения бронируемой квартиры
+/// Адрес расположения
 /// </summary>
 public record Address(
     string Country,
