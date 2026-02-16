@@ -3,6 +3,9 @@ using Domain.Shared;
 
 namespace Domain.Bookings;
 
+/// <summary>
+/// Расчёт стоимости
+/// </summary>
 public class PricingService
 {
     public PricingDetails CalculatePrice(Apartment apartment, DateRange period)

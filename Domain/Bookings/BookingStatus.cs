@@ -1,5 +1,8 @@
 ﻿namespace Domain.Bookings;
 
+/// <summary>
+/// Статусы бронирования
+/// </summary>
 public enum BookingStatus
 {
     Reserved = 1,

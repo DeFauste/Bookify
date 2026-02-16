@@ -1,5 +1,8 @@
 ﻿namespace Domain.Bookings;
 
+/// <summary>
+/// Диапазон бронирования апартаментов
+/// </summary>
 public record DateRange
 {
     private DateRange() { }

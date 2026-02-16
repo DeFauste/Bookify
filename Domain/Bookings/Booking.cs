@@ -5,6 +5,9 @@ using Domain.Shared;
 
 namespace Domain.Bookings;
 
+/// <summary>
+/// Бронирование
+/// </summary>
 public sealed class Booking : Entity
 {
     private Booking(
@@ -43,6 +46,15 @@ public sealed class Booking : Entity
     public DateTime? CompletedOnUtc { get; private set; }
     public DateTime? CancelledOnUtc { get; private set; }
 
+    /// <summary>
+    /// Зарезервировать
+    /// </summary>
+    /// <param name="apartment">Апартаменты</param>
+    /// <param name="userId">Идентификатор инициатора бронирования</param>
+    /// <param name="duration">Длительность бронирования</param>
+    /// <param name="utcNow">Дата бронирования</param>
+    /// <param name="pricingService">Расчёт стоимости</param>
+    /// <returns></returns>
     public static Booking Reserve(
         Apartment apartment,
         Guid userId,
@@ -70,6 +82,9 @@ public sealed class Booking : Entity
         return booking;
     }
 
+    /// <summary>
+    /// Подтвердить бронирование
+    /// </summary>
     public Result Confirm(DateTime utcNow)
     {
         if (Status != BookingStatus.Reserved)
@@ -85,6 +100,9 @@ public sealed class Booking : Entity
         return Result.Success();
     }
 
+    /// <summary>
+    /// Отклонить бронирование
+    /// </summary>
     public Result Reject(DateTime utcNow)
     {
         if (Status != BookingStatus.Reserved)
@@ -100,6 +118,9 @@ public sealed class Booking : Entity
         return Result.Success();
     }
 
+    /// <summary>
+    /// Завершить бронирование
+    /// </summary>
     public Result Complete(DateTime utcNow)
     {
         if (Status != BookingStatus.Confirmed)
@@ -115,6 +136,9 @@ public sealed class Booking : Entity
         return Result.Success();
     }
 
+    /// <summary>
+    /// Отменить бронирование
+    /// </summary>
     public Result Cancel(DateTime utcNow)
     {
         if (Status != BookingStatus.Confirmed)
