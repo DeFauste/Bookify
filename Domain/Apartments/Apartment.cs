@@ -20,12 +20,12 @@ public sealed class Apartment : Entity
     }
 
     /// <summary>
-    /// Наименование аппартментов
+    /// Наименование апартаментов
     /// </summary>
     public Name Name { get; private set; }
 
     /// <summary>
-    /// Описание аппартментов
+    /// Описание апартаментов
     /// </summary>
     public Description Descriptions { get; private set; }
 
