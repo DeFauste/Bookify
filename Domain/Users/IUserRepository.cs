@@ -8,7 +8,7 @@ public interface IUserRepository
     /// <summary>
     /// Получение пользователя
     /// </summary>
-    Task<User?> GetUserAsync(Guid userId, CancellationToken cancellationToken = default);
+    Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     
     /// <summary>
     /// Добавить пользователя
