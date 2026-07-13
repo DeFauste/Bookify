@@ -55,17 +55,24 @@ internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBook
             return Result.Failure<Guid>(BookingErrors.Overlap);
         }
 
-        var booking = Booking.Reserve(
-            apartment,
-            user.Id,
-            duration,
-            dateTimeProvider.UtcNow,
-            pricingService);
+        try
+        {
+            var booking = Booking.Reserve(
+                apartment,
+                user.Id,
+                duration,
+                dateTimeProvider.UtcNow,
+                pricingService);
 
-        bookingRepository.Add(booking);
-        
-        await unitOfWork.SaveChangesAsync(cancellationToken);
+            bookingRepository.Add(booking);
 
-        return booking.Id;
+            await unitOfWork.SaveChangesAsync(cancellationToken);
+
+            return booking.Id;
+        }
+        catch (ContextMarshalException)
+        {
+            return Result.Failure<Guid>(BookingErrors.Overlap);
+        }
     }
 }
