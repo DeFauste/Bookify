@@ -12,7 +12,7 @@ public sealed class Apartment : Entity
         Address = default!;
         Price = default!;
         CleaningFee = default!;
-    } // needed by EF Core
+    }
     public Apartment(Guid id,
         Name name,
         Description descriptions,
