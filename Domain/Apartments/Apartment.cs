@@ -5,6 +5,14 @@ namespace Domain.Apartments;
 
 public sealed class Apartment : Entity
 {
+    private Apartment() : base(default)
+    {
+        Name = default!;
+        Descriptions = default!;
+        Address = default!;
+        Price = default!;
+        CleaningFee = default!;
+    } // needed by EF Core
     public Apartment(Guid id,
         Name name,
         Description descriptions,

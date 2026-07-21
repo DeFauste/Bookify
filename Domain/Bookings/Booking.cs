@@ -10,6 +10,18 @@ namespace Domain.Bookings;
 /// </summary>
 public sealed class Booking : Entity
 {
+    private Booking() : base(default)
+    {
+        ApartmentId = default;
+        UserId = default;
+        Duration = default!;
+        PriceForPeriod = default!;
+        CleaningFee = default!;
+        AmenitiesUpCharge = default!;
+        TotalPrice = default!;
+        Status = default;
+        CreatedOnUtc = default;
+    }
     private Booking(
         Guid id,
         Guid apartmentId,
