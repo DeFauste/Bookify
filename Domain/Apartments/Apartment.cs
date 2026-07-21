@@ -5,11 +5,11 @@ namespace Domain.Apartments;
 
 public sealed class Apartment : Entity
 {
-    public Apartment(Guid id, 
-        Name name, 
-        Description descriptions, 
-        Address address, 
-        Money price, 
+    public Apartment(Guid id,
+        Name name,
+        Description descriptions,
+        Address address,
+        Money price,
         Money cleaningFee) : base(id)
     {
         Name = name;
