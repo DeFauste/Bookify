@@ -326,3 +326,6 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+
+## Container runtime data (Postgres/Docker volumes, etc.)
+.containers/
